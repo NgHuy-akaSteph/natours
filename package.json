@@ -1,0 +1,26 @@
+{
+  "name": "4-natours",
+  "version": "1.0.0",
+  "description": "a simple application with Node.js",
+  "main": "src/app.js",
+  "scripts": {
+    "start:dev": "nodemon server.js",
+    "start:prod": "cross-env NODE_ENV=production node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Huy Quang",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9",
+    "process": "^0.11.10"
+  },
+  "devDependencies": {
+    "compression": "^1.8.0",
+    "cross-env": "^7.0.3"
+  }
+}
