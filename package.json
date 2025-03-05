@@ -1,11 +1,11 @@
 {
-  "name": "4-natours",
+  "name": "natours",
   "version": "1.0.0",
   "description": "a simple application with Node.js",
   "main": "src/app.js",
   "scripts": {
-    "start:dev": "nodemon server.js",
-    "start:prod": "cross-env NODE_ENV=production node server.js",
+    "start:dev": "cross-env NODE_ENV=dev nodemon server.js",
+    "start:prod": "cross-env NODE_ENV=prod node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Huy Quang",

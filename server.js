@@ -1,7 +1,7 @@
 'use strict'
 
 const dotenv = require('dotenv');
-dotenv.config({ path: './config.env' });
+dotenv.config({ path: './.env'});
 
 const app = require('./src/app');
 
@@ -10,9 +10,3 @@ const server = app.listen(PORT, () => {
   console.log(`App running on port ${PORT}...`);
 });
 
-
-// process.on('SIGINT', () => {
-//   server.close(() => {
-//     console.log('Process terminated!');
-//   });
-// });

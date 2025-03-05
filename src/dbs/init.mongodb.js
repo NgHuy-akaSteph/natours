@@ -3,10 +3,11 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const { countConnect } = require('../helpers/check.connect');
-dotenv.config({ path: './config.env' });
+dotenv.config({ path: './.env' });
+const { db: { host, port, name } } = require('../configs/config.mongodb');
 
-const connectString = process.env.DATABASE_LOCAL.
-replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
+const connectString = `mongodb://${host}:${port}/${name}`;
+console.log(connectString);
 
 class Database {
 
@@ -14,9 +15,9 @@ class Database {
     this.connect();
   }
 
-  connect(type='mongodb'){
+  connect(type = 'mongodb') {
 
-    if(1 === 1){
+    if (1 === 1) {
       mongoose.set('debug', true);
       mongoose.set('debug', { color: true });
     }
@@ -33,7 +34,7 @@ class Database {
   }
 
   static getInstance() {
-    if(!Database.instance){
+    if (!Database.instance) {
       Database.instance = new Database();
     }
     return Database.instance;
@@ -41,4 +42,4 @@ class Database {
 }
 
 const instanceMongoDb = Database.getInstance();
-module.exports = {instanceMongoDb};
+module.exports = { instanceMongoDb };
