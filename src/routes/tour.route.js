@@ -6,12 +6,7 @@ const tourController = require('../controllers/tour.controller');
 
 const router = express.Router();
 
-router.param('id', tourController.checkId);
-
 // chaining multiple middleware
-router.route('/')
-  .get(tourController.getAllTours)
-  .post(tourController.checkBody, tourController.createTour);
 
 router.route('/')
   .get(tourController.getAllTours)

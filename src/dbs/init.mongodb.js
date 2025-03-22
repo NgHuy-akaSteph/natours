@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const { countConnect } = require('../helpers/check.connect');
 dotenv.config({ path: './.env' });
-const { db: { host, port, name } } = require('../configs/config.mongodb');
+const { db: { host, port, name, username, password } } = require('../configs/config.mongodb');
 
-const connectString = `mongodb://${host}:${port}/${name}`;
-console.log(connectString);
+const connectString = `mongodb://${username}:${password}@${host}:${port}/${name}?authSource=admin`;
+// console.log(connectString);
 
 class Database {
 

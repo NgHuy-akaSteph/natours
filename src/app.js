@@ -12,7 +12,7 @@ const userRouter = require('./routes/user.route');
 const app = express();
 
 //init middleware
-if(process.env.NODE_ENV === 'development') {
+if(process.env.NODE_ENV === 'dev'){
   app.use(morgan('dev'));
 }
 app.use(express.json());
@@ -22,8 +22,6 @@ app.use(express.static(`${__dirname}/../public`)); // serve static files
 
 // init db
 require('./dbs/init.mongodb');
-// const {checkOverload} = require('./helpers/check.connect');
-// checkOverload();
 
 // init routes
 app.use('/api/v1/tours', tourRouter);

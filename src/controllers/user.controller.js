@@ -1,3 +1,5 @@
+'use strict'
+
 
 const getAllUsers = (req, res) => {
   res.status(500).json({

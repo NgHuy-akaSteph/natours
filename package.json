@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "start:dev": "cross-env NODE_ENV=dev nodemon server.js",
-    "start:prod": "cross-env NODE_ENV=prod node server.js",
+    "start:prod": "cross-env NODE_ENV=prod nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Huy Quang",
@@ -17,10 +17,14 @@
     "mongoose": "^8.12.1",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.9",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "slugify": "^1.6.6"
   },
   "devDependencies": {
     "compression": "^1.8.0",
     "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }

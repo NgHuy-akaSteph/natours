@@ -5,6 +5,8 @@ const dev = {
     port : process.env.DEV_APP_PORT || 3000
   },
   db: {
+    username: process.env.DEV_DB_USERNAME,
+    password: process.env.DEV_DB_PASSWORD,
     host: process.env.DEV_DB_HOST || 'localhost',
     port: process.env.DEV_DB_PORT || 27017,
     name: process.env.DEV_DB_NAME || 'natours'

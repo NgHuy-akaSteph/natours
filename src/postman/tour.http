@@ -1,0 +1,20 @@
+@url_dev=http://localhost:3000/api/v1/tours
+@token=111
+@id=1
+
+### get all tour
+GET {{url_dev}}
+
+### get tour by id
+GET {{url_dev}}/{{id}}
+
+### create new tour
+POST {{url_dev}}
+Content-Type: application/json
+
+{
+    "name": "Test tour",
+    "duration": 10,
+    "price": 247,
+    "difficulty": "easy"
+}
